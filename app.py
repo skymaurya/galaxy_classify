@@ -13,7 +13,7 @@ import pandas as pd
 app = Flask(__name__)
 
 # Load the trained model
-with open('clf.pkl', 'rb') as file:
+with open('RF1.pkl', 'rb') as file:
     model = pickle.load(file)
 
 # Route for the home page
