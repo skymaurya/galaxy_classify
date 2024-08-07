@@ -38,7 +38,7 @@ The Galaxy Classification Project aims to predict galaxy subclasses using machin
 ### 1. Data Collection & Preparation
 
 #### Collect the Dataset
-The dataset for this project is sourced from the Sloan Digital Sky Survey (SDSS). It consists of photometric image data for galaxies, with 100,000 rows and two primary galaxy subclasses: 'STARFORMING' and 'STARBURST'. The dataset can be downloaded from Kaggle [here](https://www.kaggle.com/datasets/your-dataset-link).
+The dataset for this project is sourced from the Sloan Digital Sky Survey (SDSS). It consists of photometric image data for galaxies, with 100,000 rows and two primary galaxy subclasses: 'STARFORMING' and 'STARBURST'. The dataset can be downloaded from Kaggle.
 
 #### Data Preparation
 - **Handling Missing Values**: Missing values are identified and appropriately handled.
@@ -71,17 +71,17 @@ Different machine learning algorithms are trained to find the best model:
 
 After training and testing various models, the performance metrics for each model were compared to determine the best performing algorithm. The table below summarizes the precision, recall, f1-score, and accuracy of each model:
 
-|         **Model**        | **Precision Class 0** | **Precision Class 1** | **Recall Class 0** | **Recall Class 1** | **f1-score Class 0** | **f1-score Class 1** | **Accuracy** |
-|:------------------------:|:---------------------:|:---------------------:|:------------------:|:------------------:|:--------------------:|:--------------------:|:------------:|
-| Decision Tree Classifier |          0.79         |          0.77         |        0.77        |        0.79        |         0.78         |         0.78         |  **0.78095** |
-| Logistic Regression      |          0.80         |          0.81         |        0.81        |        0.79        |         0.81         |         0.80         |  **0.80222** |
-| Random Forest Classifier |          0.84         |          0.85         |        0.85        |        0.84        |         0.85         |         0.85         |  **0.84715** |
+|         **Model**        | **Precision Class 0** | **Precision Class 1** | **Recall Class 0** | **Recall Class 1** | **f1-score Class 0** | **f1-score Class 1** | **Accuracy** | **Overall Performance** |
+|:------------------------:|:---------------------:|:---------------------:|:------------------:|:------------------:|:--------------------:|:--------------------:|:------------:|:-----------------------:|
+| Decision Tree Classifier |          0.80         |          0.80         |        0.79        |        0.80        |         0.80         |         0.80         |  **0.79931** |      **Average**        |
+| Logistic Regression      |          0.80         |          0.82         |        0.82        |        0.79        |         0.81         |         0.81         |  **0.80848** |       **Good**          |
+| Random Forest Classifier |          0.83         |          0.81         |        0.81        |        0.83        |         0.82         |         0.82         |  **0.82068** |       **Best**          |
 
 #### Analysis
 
 - **Decision Tree Classifier**: 
-  - **Strengths**: High precision for Class 0.
-  - **Weaknesses**: Lower recall for Class 1, indicating that the model misses some instances of Class 1.
+  - **Strengths**: Good balance in precision for both classes, making it a reliable choice.
+  - **Weaknesses**: Lower recall for Class 0, indicating that the model misses some instances of Class 0.
   - **Overall Performance**: The model has the lowest overall accuracy compared to others.
 
 - **Logistic Regression**:
@@ -90,14 +90,14 @@ After training and testing various models, the performance metrics for each mode
   - **Overall Performance**: Moderate overall accuracy, making it a decent choice but not the best.
 
 - **Random Forest Classifier**:
-  - **Strengths**: Highest precision and recall for Class 0, and higher recall for Class 1.
+  - **Strengths**: Highest precision for class 0 and highest recall for Class 1.
   - **Weaknesses**: Slightly lower precision for Class 1 compared to Logistic Regression.
   - **Overall Performance**: Best overall accuracy, indicating it performs best across all metrics.
 
 ### 5. Model Deployment
 
 #### Save the Best Model
-- **File**: `RF.pkl` - The best-performing Random Forest model is saved using Python’s `pickle` module. This avoids the need to retrain the model and allows for future use.
+- **File**: `RF1.pkl` - The best-performing Random Forest model is saved using Python’s `pickle` module. This avoids the need to retrain the model and allows for future use.
 
 #### Integrate with Web Framework
 - **Web Application**: Built using Flask to create a user-friendly interface.
@@ -181,3 +181,9 @@ Install the Jupyter extension from the marketplace. To do this:
 9. Run the Jupyter Notebook
 Open galxy.ipynb in VS Code.
 Click on the Run button at the top of the notebook or press Shift+Enter to run individual cells.
+
+10.To Run the web application
+  1.open and run python 'app.py' file to start Flask Sever.In terminal click on IP address`http://127.0.0.1:5000` to interact with web app.
+  2.in web app click on the Get Started button to give input values to model for classification.
+  3.After filling values click on the 'Submit' Button, to see what model classify on the basis of inputs given.
+
