@@ -171,19 +171,19 @@ Make sure to select the Python interpreter for your virtual environment:
 
     1. Press Ctrl+Shift+P to open the command palette.
     2. Type Python: Select Interpreter and select the interpreter from your virtual environment 
-       (it should be something like venv/bin/python or venv\Scripts\python.exe).
+      (it should be something like venv/bin/python or venv\Scripts\python.exe).
 
 8. Install Jupyter Extension.
 Install the Jupyter extension from the marketplace. To do this:
-      Go to the Extensions view by clicking on the Extensions icon in the Activity Bar.
-      Search for "Jupyter" and install the extension provided by Microsoft.
+    Go to the Extensions view by clicking on the Extensions icon in the Activity Bar.
+    Search for "Jupyter" and install the extension provided by Microsoft.
 
 9. Run the Jupyter Notebook.
-Open galxy.ipynb in VS Code.
-Click on the Run button at the top of the notebook or press Shift+Enter to run individual cells.
+    Open galxy.ipynb in VS Code.
+    Click on the Run button at the top of the notebook or press Shift+Enter to run individual cells.
 
-10.To Run the web application
-  1.open and run python 'app.py' file to start Flask Sever.In terminal click on IP address`http://127.0.0.1:5000` to interact with web app.
-  2.in web app click on the Get Started button to give input values to model for classification.
-  3.After filling values click on the 'Submit' Button, to see what model classify on the basis of inputs given.
+10. To Run the web application.
+    1.open and run python 'app.py' file to start Flask Sever.In terminal click on IP address`http://127.0.0.1:5000` to       interact with web app.
+    2.in web app click on the Get Started button to give input values to model for classification.
+    3.After filling values click on the 'Submit' Button, to see what model classify on the basis of inputs given.
 
