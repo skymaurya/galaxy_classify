@@ -115,7 +115,7 @@ After training and testing various models, the performance metrics for each mode
 #### Building Server-Side Script
 - **File**: `app.py` - Contains Flask routes for rendering HTML pages and handling user inputs.
 - **Functionality**: 
-  - Load the saved model (`RF.pkl`).
+  - Load the saved model (`RF1.pkl`).
   - Render HTML pages.
   - Retrieve input values from the UI and make predictions using the model.
 
@@ -150,7 +150,7 @@ Open VS Code and install the Python extension from the marketplace,To do this:
 It is recommended to use a virtual environment to manage dependencies:  
     Create and activate a virtual environment using venv:  
     a.python -m venv venv
-      source venv/bin/activate  
+      source `venv/bin/activate`  
     b.On Windows use `venv\Scripts\activate`
 
 5. Install Dependencies.  
@@ -162,7 +162,7 @@ Install the required libraries using pip:
 6. Open the Project in VS Code.  
 Open the repository folder in VS Code:
 
-    Go to File > Open Folder....
+    Go to File > Open Folder....  
     Select the cloned repository folder.
 
 
@@ -171,7 +171,7 @@ Make sure to select the Python interpreter for your virtual environment:
 
     1. Press Ctrl+Shift+P to open the command palette.
     2. Type Python: Select Interpreter and select the interpreter from your virtual environment 
-      (it should be something like venv/bin/python or venv\Scripts\python.exe).
+      (it should be something like `venv/bin/python` or `venv\Scripts\python.exe`).
 
 8. Install Jupyter Extension.  
 Install the Jupyter extension from the marketplace. To do this:  
@@ -179,12 +179,12 @@ Install the Jupyter extension from the marketplace. To do this:
     2. Go to the Extensions view by clicking on the Extensions icon in the Activity Bar.  
      3. Search for "Jupyter" and install the extension provided by Microsoft.
 
-9. Run the Jupyter Notebook.
-    Open galxy.ipynb in VS Code.
+9. Run the Jupyter Notebook.  
+    Open `galxy.ipynb` file in VS Code.  
     Click on the Run button at the top of the notebook or press Shift+Enter to run individual cells.
 
-10. To Run the web application.
-    1.open and run python 'app.py' file to start Flask Sever.In terminal click on IP address`http://127.0.0.1:5000` to       interact with web app.
-    2.in web app click on the Get Started button to give input values to model for classification.
-    3.After filling values click on the 'Submit' Button, to see what model classify on the basis of inputs given.
+10. To Run the web application.  
+    1. open and run python `app.py` file to start Flask Sever.In terminal click on IP address`http://127.0.0.1:5000` to       interact with web app.  
+    2. in web app click on the Get Started button to give input values to model for classification.
+    3. After filling values click on the 'Submit' Button, to see what model classify on the basis of inputs given.
 
