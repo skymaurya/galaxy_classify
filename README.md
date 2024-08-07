@@ -129,61 +129,62 @@ After training and testing various models, the performance metrics for each mode
 
 To set up the environment and run the Galaxy classificastion project  on your system follow these steps:
 
-1. Clone the Repository
+1. Clone the Repository  
 First, clone the repository containing the notebook to your local machine:
 
-     git clone <repository-url>
-     cd <repository-directory>
+     git clone  repository-ur  
+     cd <repository-directory>repository-directory
 
 
-2. Install VS Code  if not already installed.
-Download and install Visual Studio Code.
+2. Install VS Code  if not already installed.  
+    Download and install Visual Studio Code.
 
-3. Install Python Extension.
-Open VS Code and install the Python extension from the marketplace. To do this:
+3. Install Python Extension.  
+Open VS Code and install the Python extension from the marketplace,To do this:
     1. Open VS Code.
     2.Go to the Extensions view by clicking on the Extensions icon in the Activity Bar on the side of the window.
     3. Search for "Python" and install the extension provided by Microsoft.
 
   
-4. Create a Virtual Environment.
-It is recommended to use a virtual environment to manage dependencies. 
-Create and activate a virtual environment using venv:
+4. Create a Virtual Environment.  
+It is recommended to use a virtual environment to manage dependencies:  
+    Create and activate a virtual environment using venv:  
     a.python -m venv venv
       source venv/bin/activate  
     b.On Windows use `venv\Scripts\activate`
 
-5. Install Dependencies.
+5. Install Dependencies.  
 Install the required libraries using pip:
 
       pip install -r requirements.txt
 
 
-6. Open the Project in VS Code.
+6. Open the Project in VS Code.  
 Open the repository folder in VS Code:
 
     Go to File > Open Folder....
     Select the cloned repository folder.
 
 
-7. Select the Python Interpreter.
+7. Select the Python Interpreter.  
 Make sure to select the Python interpreter for your virtual environment:
 
     1. Press Ctrl+Shift+P to open the command palette.
     2. Type Python: Select Interpreter and select the interpreter from your virtual environment 
       (it should be something like venv/bin/python or venv\Scripts\python.exe).
 
-8. Install Jupyter Extension.
-Install the Jupyter extension from the marketplace. To do this:
-    Go to the Extensions view by clicking on the Extensions icon in the Activity Bar.
-    Search for "Jupyter" and install the extension provided by Microsoft.
+8. Install Jupyter Extension.  
+Install the Jupyter extension from the marketplace. To do this:  
+    1. Open VS Code.  
+    2. Go to the Extensions view by clicking on the Extensions icon in the Activity Bar.  
+     3. Search for "Jupyter" and install the extension provided by Microsoft.
 
-9. Run the Jupyter Notebook.
-    Open galxy.ipynb in VS Code.
+9. Run the Jupyter Notebook.  
+    Open galxy.ipynb in VS Code.  
     Click on the Run button at the top of the notebook or press Shift+Enter to run individual cells.
 
-10. To Run the web application.
-    1.open and run python 'app.py' file to start Flask Sever.In terminal click on IP address`http://127.0.0.1:5000` to       interact with web app.
-    2.in web app click on the Get Started button to give input values to model for classification.
-    3.After filling values click on the 'Submit' Button, to see what model classify on the basis of inputs given.
+10. To Run the web application.  
+    1. open and run python 'app.py' file to start Flask Sever.In terminal click on IP address`http://127.0.0.1:5000` to       interact with web app.  
+    2. in web app click on the Get Started button to give input values to model for classification.  
+    3. After filling values click on the 'Submit' Button, to see what model classify on the basis of inputs given.
 
