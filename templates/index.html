@@ -13,21 +13,25 @@
     padding: 0;
     background-color: #e0e0e0;
     display: flex;
-    background-image: url("/static/Designer.png");
+    background-image: url("/static/ta1.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size:auto;
     background-attachment: fixed;
+    height: fit-content;
     flex-direction: column;
 }
-
+        
 
         .navbar {
-            background-color: #0ac5fe;
-            overflow: hidden;
+            background-color: #2af50f;
+            overflow:inherit;
             position: fixed;
+            align-items: center;
+            justify-content: space-around;
             top: 0;
             width: 100%;
+;
         }
 
         .navbar ul {
@@ -38,30 +42,32 @@
 
         .navbar ul li {
             float: left;
+            position:relative;justify-content: space-around;
+            top: 0;
         }
 
         .navbar ul li a {
             display: block;
-            color: rgb(8, 9, 8);
+            font-weight: bold;
+            color: rgb(0, 26, 255);
             text-align: center;
             padding: 14px 20px;
             text-decoration: none;
         }
 
         .navbar ul li a:hover {
-            background-color: #19e634;
+            background-color: #bf45f4b9;
         }
 
         section {
-            padding: 60px 20px;
+        
             text-align: center;
         }
 
         .heading,
         .headings {
-            color: #00ff1e;
+            color: #bc0b0b;
             font-size: 2em;
-            margin-bottom: 20px;
         }
 
         #home {
@@ -71,13 +77,19 @@
 
         .hell {
             margin-bottom: 20px;
+            color:rgb(4, 242, 255) ;
+    
+          
+            
         }
 
         .button-1 .btn {
-            background-color: #a81818;
-            color: rgb(152, 251, 3);
-            border:#070808;
-            padding: 10px 20px;
+            background-color: cyan;
+            color:light rgb(246, 19, 196);
+            border:#3c04bd;
+            padding: 1px;
+            border-radius: 5px;;
+             text-shadow: #d5e63c;
             text-decoration:solid ;
             cursor: pointer;
             font-size: 1.2em;
@@ -85,17 +97,31 @@
         }
 
         .button-1 .btn:hover {
-            background-color: #04aff9;
+            background-color: #002fff;
         }
 
         #about {
-           /* background-color: #e0e0e0;*/font:200;
+
            text-align: center;
+           font-family: Arial, Helvetica, sans-serif;
+           color: electric rgb(255, 0, 0);
+
+        }
+        .heading1{
+        color: #d5e63c;
+        font-size: 2em;
+        margin-bottom: 20px;
+    
         }
 
         #intro {
             max-width: 600px;
             text-align: left;
+        }
+        .space{
+
+            display: inline-block;
+            width: 15px;
         }
 
         #intro h2 {
@@ -143,12 +169,12 @@
         table th {
             background-color: #d5e63c;
         }
-        .h {
-            border: 0;
-            height: 1px;
+       /* .h {
+            border: 5;
+            height: ;
             background: #ddd;
         }
-
+*/
         input[type="text"] {
             width: calc(100% - 10px); /* Adjusted for reduced padding */
             padding: 5px;
@@ -164,9 +190,22 @@
             cursor: pointer;
             font-size: 1.2em;
         }
+        .about-section{
+            text-align: center; color: rgb(11, 241, 245);
+            font-size: medium;
+            font-display: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
 
         input[type="submit"]:hover {
             background-color: #0def58;
+        }
+        .text-center{
+            text-align: center;
+            font-display: bold;
+            color:#fafa01;
+            font-weight: 400;
         }
 
         footer {
@@ -196,46 +235,43 @@
             <li><a href="#contacts">Contacts</a></li>
         </ul>
     </nav>
-     <hr class="h">
-     <hr class="h">
+
     <section id="home">
         <div class="hell">
-            <h2>Hello Everyone!</h2>
+            <h2>Hello Everyone !</h2>
         </div>
 
 
 
-        <div class="main">
-            <h1 class="heading">WELCOME TO THE GALAXY SUB CLASS PREDICTOR PAGE USING MACHINE LEARNING ALGORITHM</h1>
+        <div class="main"  margin-bottom: 20px>
+            <h1 class="heading1">WELCOME TO THE GALAXY SUB CLASS PREDICTOR PAGE USING MACHINE LEARNING ALGORITHM</h1>
         </div>
-        <div class="button-1">
+        <div class="button-1" style="display: flex;align-items: center;justify-content: center;gap:10px">
             <button class="btn">
-                <h2>KNOW MORE<a href="https://www.kaggle.com/datasets/bryancimo/sdss-galaxy-classification-dr18"></a> </h2>
+                <h2> click here<a href="https://www.kaggle.com/datasets/bryancimo/sdss-galaxy-classification-dr18"></a> </h2>
             </button>
+            <h2 style="color: #e9e9ea;">To Know More About Our Project</h2>
         </div>
     </section>
-     <hr class="h">
-     <hr class="h">
+     
     
     <section id="about">
         <h1 class="headings">ABOUT</h1>
         <section id="about" class="about-section">
             
-            <p class="text-center my-2">
+            <p>
                 Our project uses the Sloan Digital Sky Survey data to predict galaxy subclasses. Learn about the data, the machine learning model, and how it all works together.
             </p>
-            <p class="text-center my-2">
+            <p >
                 The Sloan Digital Sky Survey provides an extensive catalog of astronomical data. Our machine learning model processes this data to classify galaxies into 'STARFORMING' or 'STARBURST' categories based on their photometric characteristics. Explore the data and insights to understand the universe better.
             </p>
         </section>
     
     </section>
-      <hr>
-      <hr>
     <section id="howitworks">
         <h1 class="headings">How It Works</h1>
        
-           <p> Discover how our galaxy classification tool works to provide accurate predictions on galaxy types. Follow these simple steps:</p>
+           <p style="color:darkred ; font-weight: 600; font-size: 20px;"> Discover how our galaxy classification tool works to provide accurate predictions on galaxy types. Follow these simple steps:</p>
         <div>
             <h2 class="text-center">1. Input Data</h2>
             <p class="text-center">
@@ -266,7 +302,7 @@
 
     <section id="getstarted">
         <h1 class="headings">Predict your Galaxy's Subclass</h1>
-        <h1>Enter your galaxy's photometric data</h1>
+        <h1 style="color: #00ffff;">Enter your galaxy's photometric data</h1>
         <form id="form" action="/submit" method="post">
             <table>
                 <thead>
@@ -322,24 +358,17 @@
             <input type="submit" value="Submit">
         </form>
     </section>
-      <hr>
     <footer id="contacts">
         <h2>Contact Me</h2>
         <div class="footer-text">
             <div class="contact-icons">
-                <a href="https://github.com/skymaurya/galaxy_classify" target="_blank">
-                    <img src="/static/gitnew1.png" alt="GitHub" class="contact-icon">
-                </a>
-                <a href="www.linkedin.com/in/akash-maurya-a1aba9224" target="_blank">
-                    <img src="/static/linknew.jpg" alt="LinkedIn" class="contact-icon">
-                </a>
-                <a href="mailto:akashcric17@gmailcom" target="_blank">
-                    <img src=" /static/image1.png" alt="Email" class="contact-icon">
-                </a>
+                <a href="https://github.com/skymaurya/galaxy_classify" target="_blank">Git Hub</a><span class="space"></span><a href="www.linkedin.com/in/akash-maurya-a1aba9224" target="_blank">LInked In</a><span class="space"></span><a href="mailto:akashcric17@gmailcom" target="_blank">Mail</a>
             </div>
             <p>&copy; Akash Maurya | All rights reserved.</p>
         </div>
     </footer>
+    <hr>
+    <hr>
 </body>
 
 </html>
