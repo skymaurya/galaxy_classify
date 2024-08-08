@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SDSS Galaxy CLASSIFICATION</title>
-    
+    <title>SDSS Galaxy Classification</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -22,7 +21,7 @@
             overflow: hidden;
             position: fixed;
             top: 0;
-            width: 100%;;
+            width: 100%;
         }
 
         .navbar ul {
@@ -33,7 +32,6 @@
 
         .navbar ul li {
             float: left;
-    
         }
 
         .navbar ul li a {
@@ -53,7 +51,8 @@
             text-align: center;
         }
 
-        .heading, .headings {
+        .heading,
+        .headings {
             color: #333;
             font-size: 2em;
             margin-bottom: 20px;
@@ -61,6 +60,7 @@
 
         #home {
             background-color: #fff;
+            padding-top: 80px; /* Adjust for fixed navbar */
         }
 
         .hell {
@@ -83,9 +83,6 @@
         #about {
             background-color: #e0e0e0;
         }
-
-  
-       
 
         #intro {
             max-width: 600px;
@@ -118,20 +115,17 @@
 
         table {
             display: table;
-            width: 800%;
-            align-self: auto;
+            width: 100%;
             max-width: 600px;
             margin: 0 auto;
-            
             border-collapse: collapse;
         }
 
-        table th, table td {
-            padding: 20px;
-            border: 5px solid #050613;
+        table th,
+        table td {
+            padding: 5px; /* Reduced padding */
+            border: 1px solid #050613; /* Reduced border width */
             background-color: aqua;
-        
-            
         }
 
         table th {
@@ -139,7 +133,7 @@
         }
 
         input[type="text"] {
-            width: calc(100% - 20px);
+            width: calc(100% - 10px); /* Adjusted for reduced padding */
             padding: 5px;
         }
 
@@ -162,7 +156,7 @@
             background-color: #333;
             color: white;
             height: 100px;
-            padding:  30px;
+            padding: 30px;
             text-align: center;
             position: relative;
             bottom: 0;
@@ -181,113 +175,105 @@
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#howitworks">How It Works</a></li>
-            <li><a href="#getstarted">Getstarted</a></li>
+            <li><a href="#getstarted">Get Started</a></li>
             <li><a href="#contacts">Contacts</a></li>
         </ul>
-
     </nav>
 
-    
     <section id="home">
         <div class="hell">
-            <h2>Hello Everyone !</h2>
+            <h2>Hello Everyone!</h2>
         </div>
         <div class="main">
-
-            <h1 class="heading">WELCOME TO THE GALAXY PREDICTOR PAGE USING MACHINE  LEARNING ALGORITHM</h1>
+            <h1 class="heading">WELCOME TO THE GALAXY PREDICTOR PAGE USING MACHINE LEARNING ALGORITHM</h1>
         </div>
         <div class="button-1">
-                <button class="btn">
-                    <h2>Hire Me</h2>
-                </button>
+            <button class="btn">
+                <h2>Hire Me</h2>
+            </button>
         </div>
-        
     </section>
+
     <section id="about">
         <h1 class="headings">ABOUT</h1>
         <div id="pic">
             <img src="my.jpg" alt="">
             <div id="intro">
                 <h2>AKASH MAURYA</h2>
-                <p>
-
-                </p> 
+                <p></p>
             </div>
         </div>
     </section>
 
     <section id="howitworks">
         <h1 class="headings">PORTFOLIO</h1>
-        <div class="gallery">
-            
+        <div class="gallery"></div>
     </section>
-     
+
     <section id="getstarted">
         <h1 class="headings">Predict your Galaxy's Subclass</h1>
-        <h1>Enter your galaxy's photometric data</h1 align-items=centre>
-    
-    <form   id="form" action="/submit" method="post">
-        <table class="" >
-            <thead>
-                <tr>
-                    <th>Columns</th>
-                    <th>Inputs</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>r</td>
-                    <td><input type="text" name="r" required></td>
-                </tr>
-                <tr>
-                    <td>i</td>
-                    <td><input type="text" name="i" required></td>
-                </tr>
-                <tr>
-                    <td>z</td>
-                    <td><input type="text" name="z" required></td>
-                </tr>
-                <tr>
-                    <td>petroRad_g</td>
-                    <td><input type="text" name="petroRad_g" required></td>
-                </tr>
-                <tr>
-                    <td>petroRad_r</td>
-                    <td><input type="text" name="petroRad_r" required></td>
-                </tr>
-                <tr>
-                    <td>petroR50_u</td>
-                    <td><input type="text" name="petroR50_u"required></td>
-                </tr>
-                <tr>
-                    <td>petroR50_g</td>
-                    <td><input type="text" name="petroR50_g" required></td>
-                </tr>
-                <tr>
-                    <td>petroR50_i</td>
-                    <td><input type="text" name="petroR50_i"required></td>
-                </tr>
-                <tr>
-                    <td>petroR50_r</td>
-                    <td><input type="text" name="petroR50_r" required></td>
-                </tr>
-                <tr>
-                    <td>petroR50_z</td>
-                    <td><input type="text" name="petroR50_z"required></td>
-                </tr>
-            </tbody>
-        </table>
-        <br>
-        <input type="submit" value="Submit">
-    </form>
-  
-    
+        <h1>Enter your galaxy's photometric data</h1>
+        <form id="form" action="/submit" method="post">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Columns</th>
+                        <th>Inputs</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>r</td>
+                        <td><input type="text" name="r" required></td>
+                    </tr>
+                    <tr>
+                        <td>i</td>
+                        <td><input type="text" name="i" required></td>
+                    </tr>
+                    <tr>
+                        <td>z</td>
+                        <td><input type="text" name="z" required></td>
+                    </tr>
+                    <tr>
+                        <td>petroRad_g</td>
+                        <td><input type="text" name="petroRad_g" required></td>
+                    </tr>
+                    <tr>
+                        <td>petroRad_r</td>
+                        <td><input type="text" name="petroRad_r" required></td>
+                    </tr>
+                    <tr>
+                        <td>petroR50_u</td>
+                        <td><input type="text" name="petroR50_u" required></td>
+                    </tr>
+                    <tr>
+                        <td>petroR50_g</td>
+                        <td><input type="text" name="petroR50_g" required></td>
+                    </tr>
+                    <tr>
+                        <td>petroR50_i</td>
+                        <td><input type="text" name="petroR50_i" required></td>
+                    </tr>
+                    <tr>
+                        <td>petroR50_r</td>
+                        <td><input type="text" name="petroR50_r" required></td>
+                    </tr>
+                    <tr>
+                        <td>petroR50_z</td>
+                        <td><input type="text" name="petroR50_z" required></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
     <footer id="contacts">
         <div class="footer-text">
-           &copy; Akash Maurya | All rights reserved.
+            &copy; Akash Maurya | All rights reserved.
         </div>
     </footer>
-
 </body>
 
 </html>
