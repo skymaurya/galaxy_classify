@@ -7,13 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SDSS Galaxy Classification</title>
     <style>
-         body {
+                
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+    body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #e0e0e0;
     display: flex;
-    background-image: url("/static/ta1.jpg");
+    background-image: url("/static/black.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size:auto;
@@ -22,71 +34,94 @@
     flex-direction: column;
 }
         
+.navbar{
+    display:Flex;
+    justify-content:space-around;
+    align-items: center;
+    background-color: rgb(154, 12, 215);
+    position:fixed;
+    top: 0;
+}
 
-        .navbar {
-            background-color: #2af50f;
-            overflow:inherit;
-            position: fixed;
-            align-items: center;
-            justify-content: space-around;
-            top: 0;
-            width: 100%;
-;
-        }
 
-        .navbar ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
+.navbar ul{
+    display: flex;
+    list-style: none;
+    margin: 20px 0px;
+}
 
-        .navbar ul li {
-            float: left;
-            position:relative;justify-content: space-around;
-            top: 0;
-        }
+.navbar ul li{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
 
-        .navbar ul li a {
-            display: block;
-            font-weight: bold;
-            color: rgb(0, 26, 255);
-            text-align: center;
-            padding: 14px 20px;
-            text-decoration: none;
-        }
+.navbar ul li a{
+    text-decoration:aliceblue;
+    color: white;
+    padding: 8px 25px;
+    transition:all .5s ease;
+} 
 
-        .navbar ul li a:hover {
-            background-color: #bf45f4b9;
-        }
+.navbar ul li a:hover{
+    background-color: rgb(0, 255, 225);
+    color: black;
+    box-shadow: 0 0 10px white;
+    justify-content: center;
+}
+
+#home{
+    display:flex;
+    flex-direction:column;
+    background-size: cover;
+    width: 100%;
+    height: 840px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    
+}
+
+#home::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    
+    opacity: 0.8;
+}
 
         section {
         
             text-align: center;
+            text-overflow: clip;
+        
+
         }
 
         .heading,
         .headings {
-            color: #bc0b0b;
+            color: #2afc05;
             font-size: 2em;
+            padding: 5px;
         }
 
         #home {
-            padding-top: 80px;
-             /* Adjust for fixed navbar */
+            padding-top: px;
+             /* Adjust for fixed navbar*/
         }
 
         .hell {
-            margin-bottom: 20px;
+            margin: bottom 20px; ;
             color:rgb(4, 242, 255) ;
-    
-          
-            
+            font-weight: bold;
+            font-size: 2em;  
         }
 
         .button-1 .btn {
             background-color: cyan;
             color:light rgb(246, 19, 196);
-            border:#3c04bd;
+            border:#6125ec;
             padding: 1px;
             border-radius: 5px;;
              text-shadow: #d5e63c;
@@ -101,14 +136,17 @@
         }
 
         #about {
-
-           text-align: center;
+                  padding-top: 50px;
+           text-align:center;
+           font-size: medium;
+           font-display: bold;
            font-family: Arial, Helvetica, sans-serif;
            color: electric rgb(255, 0, 0);
 
         }
         .heading1{
         color: #d5e63c;
+        font-family: Arial, Helvetica, sans-serif;
         font-size: 2em;
         margin-bottom: 20px;
     
@@ -132,6 +170,8 @@
         #howitworks {
            /* background-color: #fff;*/
            font-size: medium;
+           padding:50px;
+           text-align: center;
            font-family: Arial, Helvetica, sans-serif;
         }
 
@@ -143,6 +183,8 @@
 
         #getstarted {
                 /*background-color: #e0e0e0;*/  
+                padding: 130px;
+                text-align: center;
                 font-family: Arial, Helvetica, sans-serif;
         }
 
@@ -169,12 +211,7 @@
         table th {
             background-color: #d5e63c;
         }
-       /* .h {
-            border: 5;
-            height: ;
-            background: #ddd;
-        }
-*/
+
         input[type="text"] {
             width: calc(100% - 10px); /* Adjusted for reduced padding */
             padding: 5px;
@@ -184,7 +221,7 @@
             display: block;
             margin: 20px auto;
             padding: 10px 20px;
-            background-color: #333;
+            background-color: #00ff62;
             color: white;
             border: none;
             cursor: pointer;
@@ -192,10 +229,11 @@
         }
         .about-section{
             text-align: center; color: rgb(11, 241, 245);
-            font-size: medium;
-            font-display: bold;
+            font-size:larger;
             font-family: Arial, Helvetica, sans-serif;
             font-weight: bold;
+            line-height:2;
+          
         }
 
         input[type="submit"]:hover {
@@ -204,8 +242,9 @@
         .text-center{
             text-align: center;
             font-display: bold;
-            color:#fafa01;
+            color:#05f2ff;
             font-weight: 400;
+            font-size:larger;
         }
 
         footer {
@@ -241,19 +280,16 @@
             <h2>Hello Everyone !</h2>
         </div>
 
-
-
         <div class="main"  margin-bottom: 20px>
             <h1 class="heading1">WELCOME TO THE GALAXY SUB CLASS PREDICTOR PAGE USING MACHINE LEARNING ALGORITHM</h1>
         </div>
         <div class="button-1" style="display: flex;align-items: center;justify-content: center;gap:10px">
             <button class="btn">
-                <h2> click here<a href="https://www.kaggle.com/datasets/bryancimo/sdss-galaxy-classification-dr18"></a> </h2>
+                <h2><a href="https://www.kaggle.com/datasets/bryancimo/sdss-galaxy-classification-dr18">Click Here</a></h2>
             </button>
             <h2 style="color: #e9e9ea;">To Know More About Our Project</h2>
         </div>
     </section>
-     
     
     <section id="about">
         <h1 class="headings">ABOUT</h1>
@@ -261,9 +297,9 @@
             
             <p>
                 Our project uses the Sloan Digital Sky Survey data to predict galaxy subclasses. Learn about the data, the machine learning model, and how it all works together.
-            </p>
+            </p><br>
             <p >
-                The Sloan Digital Sky Survey provides an extensive catalog of astronomical data. Our machine learning model processes this data to classify galaxies into 'STARFORMING' or 'STARBURST' categories based on their photometric characteristics. Explore the data and insights to understand the universe better.
+                The Sloan Digital Sky Survey provides an extensive catalog of astronomical data.<br> Our machine learning model processes this data to classify galaxies into 'STARFORMING' or 'STARBURST' <br>categories based on their photometric characteristics. Explore the data and insights to understand the universe better.
             </p>
         </section>
     
@@ -271,38 +307,35 @@
     <section id="howitworks">
         <h1 class="headings">How It Works</h1>
        
-           <p style="color:darkred ; font-weight: 600; font-size: 20px;"> Discover how our galaxy classification tool works to provide accurate predictions on galaxy types. Follow these simple steps:</p>
+           <p style="color:rgb(208, 255, 2) ; font-weight: 600; font-size: 20px;"> Discover how our galaxy classification tool works to provide accurate predictions on galaxy types. Follow these simple steps:</p>
         <div>
-            <h2 class="text-center">1. Input Data</h2>
-            <p class="text-center">
-                Enter the photometric data of your galaxy into the form below. This data is essential for our<br >model to make a precise classification. Ensure you provide all required details for the best results.
+            <h2 class="text-center" style="padding: 20px;color:white;">1. Input Data</h2>
+            <p class="text-center" style="line-height:1.5;">
+                Enter the photometric data of your galaxy into the form below. <br >data is essential for ourmodel to make a precise classification.<br> Ensure you provide all required details for the best results.
             </p> 
         
         </div>   
         <div>
-             <h2 class="text-center">2. Submit Your Data</h2>   
-            <p class="text-center">
-            Click the 'Submit' button to send your data to our model. The submission process <br> transmits your information for analysis.</p>
+             <h2 class="text-center"  style="padding: 20px;color:white;">2. Submit Your Data</h2>   
+            <p class="text-center" style="line-height:1.5;">
+            Click the 'Submit' button to send your data to our model.<br> The submission process  transmits your information for analysis.</p>
 
         </div>
-        <div> <h2 class="text-center">  3. Data Processing</h2>
+        <div> <h2 class="text-center" style="padding: 20px ;color:white;">  3. Data Processing</h2>
 
-            <p class="text-center">
+            <p class="text-center"style="padding: 20px ;line-height:1.5;" >
             Our advanced machine learning model processes the submitted data.<br>Trained ontheSloan Digital Sky Survey (SDSS) dataset, the model <br>analyzes the characteristics of your galaxy to determine its subclass.</p>
         </div>
         <div>
-            <h2 class="text-center">4. Receive Prediction</h2>
-            <p class="text-center">
+            <h2 class="text-center"style="padding: 20px;color:white ;line-height:1.5;"> 4. Receive Prediction</h2>
+            <p class="text-center" style="line-height:1.5;">
             Once processing is complete, you will receive a prediction indicating<br> whether thegalaxy isclassified as 'STARFORMING' or 'STARBURST'.<br> Review the results to gain insights into the galaxy’s type.</p>
         </div>
             
     </section>
-    <hr>
-    <hr>
-
     <section id="getstarted">
-        <h1 class="headings">Predict your Galaxy's Subclass</h1>
-        <h1 style="color: #00ffff;">Enter your galaxy's photometric data</h1>
+        <h1 class="headings"style="margin-bottom: 20px;">Predict your Galaxy's Subclass</h1>
+        <h1 style="color: #00ffff;">Enter your galaxy's photometric data Here</h1>
         <form id="form" action="/submit" method="post">
             <table>
                 <thead>
@@ -367,8 +400,6 @@
             <p>&copy; Akash Maurya | All rights reserved.</p>
         </div>
     </footer>
-    <hr>
-    <hr>
 </body>
 
 </html>
