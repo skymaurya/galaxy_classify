@@ -180,7 +180,7 @@ Install the Jupyter extension from the marketplace. To do this:
      3. Search for "Jupyter" and install the extension provided by Microsoft.
 
 9. Run the Jupyter Notebook.  
-    Open `galxy.ipynb` file in VS Code.  
+    Open `galaxy.ipynb` file in VS Code.  
     Click on the Run button at the top of the notebook or press Shift+Enter to run individual cells.
 
 10. To Run the web application.  
